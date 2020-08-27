@@ -101,7 +101,7 @@ window.onload = function(){
   ar = document.getElementsByTagName("a")
   for(let i = 0; i< ar.length; i++){
     if(ar[i].pathname.substring(0,9) == "/classes/"){
-      ar[i].href = ar[i].href.replace("/classes/", "/wilkelabtest/classes/")
+      ar[i].href = ar[i].href.replace("/classes/", "/wilkelabtest2/classes/")
       console.log(ar[i])
     } 
   }
