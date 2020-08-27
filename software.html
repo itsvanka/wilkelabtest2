@@ -1,0 +1,47 @@
+---
+layout: page
+title: Software
+permalink: /software
+---
+{% for sw in site.data.software %}
+  <div class="element-wrap">
+    <div class="element-name">{{ sw.name }}</div> – 
+    <div class="element-text">{{ sw.tag_line }}</div>
+
+    {% if sw.author %}
+    <div class="element-subtext">
+      Written by {{ sw.author }}
+    </div>
+    {% endif %}
+
+    <div class="element-links">
+    {% if sw.source_URL %}
+    <a href="{{ sw.source_URL }}">
+      <span class="mdi mdi-open-in-new"> </span> 
+      Source
+    </a><br />
+    {% endif %}
+
+    {% if sw.CRAN_URL %}
+    <a href="{{ sw.CRAN_URL }}">
+      <span class="mdi mdi-language-r"> </span> 
+      CRAN
+    </a><br />
+    {% endif %}
+
+    {% if sw.PyPI_URL %}
+    <a href="{{ sw.PyPI_URL }}">
+      <span class="mdi mdi-language-python"> </span> 
+      PyPI
+    </a><br />
+    {% endif %}
+
+    {% if sw.paper_URL %}
+    <a href="{{ sw.paper_URL }}">
+      <span class="mdi mdi-text-box"> </span> 
+      Paper
+    </a>
+    {% endif %}
+    </div>
+  </div>
+{% endfor %}
