@@ -84,6 +84,12 @@ function hideOverlay(){
 window.onscroll = watchScroll
 /*- show/hide button -*/
 function watchScroll(){
+  /*-parallax-*/
+  let img = document.getElementsByClassName("main-img")[0]
+  if(img){
+    img.style.backgroundPositionY = "calc(50% + " + window.scrollY * 0.35 +"px)"
+  }
+  /*- scroll-to-top -*/
   if (window.scrollY > 55){
     document.getElementsByClassName("btn-scroll-top")[0].style.display = "block";
   }
